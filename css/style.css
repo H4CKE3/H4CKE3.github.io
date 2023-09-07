@@ -12,7 +12,7 @@
 hr {
     display: block;
     border: none;
-    border-top: 1px solid #1F1F1F;
+    border-top: 1px solid #1f1f1f;
     margin: 50px 10% 10px 10%;
 }
 
@@ -40,7 +40,7 @@ body {
 .topBar {
     display: flex;
     align-items: center;
-    background-color: #1F1F1F;
+    background-color: #1f1f1f;
     width: auto;
     height: 75px;
     padding-left: 10%;
@@ -113,7 +113,7 @@ body {
     border: 2px #f4f4f4 solid;
     border-radius: 16px;
     background-color: #bbe1fa;
-    color: #1b262c;
+    color: #1f1f1f;
     transition: 0.5s ease-in-out;
 }
 
