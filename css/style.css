@@ -177,11 +177,15 @@ body {
     opacity: 1;
     transition: 0.3s ease-in-out;
 }
-
 /* 主界面结束 */
 
-
-
+/* 关于开始 */
+.information{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+}
+/* 关于结束 */
 
 
 
