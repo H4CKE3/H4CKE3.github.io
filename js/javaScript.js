@@ -1,5 +1,3 @@
-
-
 //跳转联系方式
 (function () {
     document.addEventListener('DOMContentLoaded', function () {
@@ -23,13 +21,52 @@
 
 
 
-///导航栏显示
+// 跳转头部显示效果
 (function () {
     window.addEventListener("scroll", function () {
-        const topBar = document.querySelector('.topBar');
+        const up = this.document.querySelector(".upToTop");
         const dis = document.documentElement.scrollTop;
         if (dis >= 75) {
-
+            up.style.opacity = 1;
+            up.style.right = "15px";
+        } else {
+            up.style.opacity = 0;
+            up.style.right = "-15px";
         }
     });
 })();
+
+
+
+
+
+//跳转到头部
+window.onload = function () {
+    const up = this.document.querySelector(".upToTop");
+    console.log(up);
+    up.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
