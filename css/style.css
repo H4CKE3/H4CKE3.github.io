@@ -11,11 +11,6 @@
 }
 
 /* 初始化标签结束 */
-
-
-
-
-
 /* 内容分割开始 */
 hr {
     display: block;
@@ -27,12 +22,6 @@ hr {
 }
 
 /* 内容分割结束 */
-
-
-
-
-
-
 /* 身体开始 */
 body {
     display: block;
@@ -45,11 +34,6 @@ body {
 }
 
 /* 身体结束 */
-
-
-
-
-
 /* 头部开始 */
 .topBar {
     display: flex;
@@ -60,6 +44,7 @@ body {
     padding-left: 10%;
     padding-right: 10%;
     position: fixed;
+    transition: 0.3s ease-in-out;
 }
 
 .topBar .title {
@@ -73,7 +58,6 @@ body {
     color: dodgerblue;
     font-size: 40px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-right: 50%;
 }
 
 .topBar .title:hover {
@@ -95,7 +79,7 @@ body {
     height: 45px;
     font-size: 18px;
     color: #f4f4f4;
-    border: 2px #1f1f1f solid;
+    border: 2px solid transparent;
     border-radius: 10px;
 }
 
@@ -134,19 +118,13 @@ body {
 }
 
 /* 头部结束 */
-
-
-
-
-
 /* 主界面开始 */
 .main {
     display: flex;
     justify-content: center;
     align-items: end;
     background-color: #f4f4f4;
-    background-image: url(https://www.z4a.net/images/2023/09/06/bgc1.png);
-    /* background-image: url(https://www.z4a.net/images/2023/09/06/bggif1.gif); */
+    background-image: url(../assets/bgc1.png);
     background-repeat: no-repeat;
     background-position: center;
     width: auto;
@@ -192,16 +170,11 @@ body {
 }
 
 /* 主界面结束 */
-
-
-
-
-
 /* 滚动到首页开始 */
 .upToTop {
     position: fixed;
     bottom: 100px;
-    right: 15px;
+    right: -15px;
     cursor: pointer;
     content: "";
     display: block;
@@ -214,25 +187,15 @@ body {
 }
 
 /* 滚动到首页结束 */
-
-
-
-
-
 /* 关于开始 */
 .information {
-    padding-bottom: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 /* 关于结束 */
-
-
-
-
-
 /* 尾部开始 */
 footer .footer {
     background-color: #f4f4f4;

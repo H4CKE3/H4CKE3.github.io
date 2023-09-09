@@ -14,11 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
             window.open("../assets/wechatQR.png", "_blank")
         });
     })();
-
-
-
-
-
     // 跳转头部
     (function () {
         const up = document.querySelector(".upToTop");
@@ -35,6 +30,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         up.addEventListener("click", function () {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    })();
+    //跳转回到首页
+    (function () {
+        const btn = document.querySelector(".topBar .home");
+        btn.addEventListener("click", function () {
+            window.location.href = "../index.html";
+        });
+    })();
+    //往下滑动透明导航栏
+    (function () {
+        const topBar = document.querySelector(".topBar");
+        window.addEventListener("scroll", function () {
+            const dis = document.documentElement.scrollTop;
+            if (dis >= 75) {
+                topBar.style.backgroundColor = "transparent";
+            } else {
+                topBar.style.backgroundColor = "#1f1f1f";
+            }
         });
     })();
 });
