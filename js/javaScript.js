@@ -22,11 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // 跳转头部
     (function () {
         const up = document.querySelector(".upToTop");
-        const dis = document.documentElement.scrollTop;
         window.addEventListener("scroll", function () {
+            const dis = document.documentElement.scrollTop;
             if (dis >= 75) {
                 up.style.opacity = 1;
                 up.style.right = "15px";
+                console.log(11);
             } else {
                 up.style.opacity = 0;
                 up.style.right = "-15px";
