@@ -197,12 +197,21 @@ body {
     transition: 0.3s ease-in-out;
 }
 
-/* 关于 */
-.information {
+/* 小区块 */
+.chunk {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: start;
+    width: 100;
+    height: 100vh;
+    margin: 2% 6%;
+    background-color: rgba(244, 244, 244, 0.6);
+}
 
+/* 关于个人 */
+.chunk .pinfo {
+    font-size: 3vh;
+    margin: 5%;
 }
 
 /* 尾部 */
