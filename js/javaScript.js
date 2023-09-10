@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (dis >= 75) {
                 up.style.opacity = 1;
                 up.style.right = "15px";
-                console.log(11);
             } else {
                 up.style.opacity = 0;
                 up.style.right = "-15px";
@@ -49,6 +48,14 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 topBar.style.backgroundColor = "#1f1f1f";
             }
+        });
+    })();
+    //跳转
+    (function () {
+        const btn = document.querySelector(".topBar .info");
+        const tar = document.getElementById("chunk1");
+        btn.addEventListener("click", function () {
+            tar.scrollIntoView({ behavior: "smooth" });
         });
     })();
 });

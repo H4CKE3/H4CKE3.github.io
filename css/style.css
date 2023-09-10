@@ -22,7 +22,8 @@ hr {
 
 /* 身体 */
 body {
-    background-image: url(../assets/bgc.jpg);
+    /* background-image: url(../assets/bgc.jpg); */
+    background-image: url(https://www.helloimg.com/images/2023/09/11/onGdJo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -52,8 +53,13 @@ body {
     justify-content: center;
     align-items: center;
     color: dodgerblue;
-    font-size: 40px;
+    font-size: 6vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.topBar .title:hover {
+    font-size: 7vh;
+    transition: 0.3s ease-in-out;
 }
 
 .topBar .home,
@@ -88,12 +94,6 @@ body {
         width: auto;
         height: auto;
     }
-}
-
-
-.topBar .title:hover {
-    font-size: 45px;
-    transition: 0.3s ease-in-out;
 }
 
 .topBar .home::before,
@@ -136,7 +136,8 @@ body {
     justify-content: center;
     align-items: end;
     background-color: #f4f4f4;
-    background-image: url(../assets/bgc1.png);
+    /* background-image: url(../assets/bgc1.png); */
+    background-image: url(https://www.helloimg.com/images/2023/09/11/onGvOD.png);
     background-repeat: no-repeat;
     background-position: center;
     width: auto;
@@ -189,12 +190,17 @@ body {
     cursor: pointer;
     content: "";
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 7vh;
+    height: 7vh;
     background-size: cover;
     background-image: url(../assets/up-btn.png);
     opacity: 0;
     transition: 0.3s ease-in-out;
+}
+
+.upToTop:hover {
+    width: 10vh;
+    height: 10vh;
 }
 
 /* 小区块 */
@@ -205,13 +211,10 @@ body {
     width: 100;
     height: 100vh;
     margin: 2% 6%;
+    padding: 5%;
     background-color: rgba(244, 244, 244, 0.6);
-}
-
-/* 关于个人 */
-.chunk .pinfo {
     font-size: 3vh;
-    margin: 5%;
+    border-radius: 25px;
 }
 
 /* 尾部 */
