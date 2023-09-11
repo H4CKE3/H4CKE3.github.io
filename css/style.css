@@ -20,6 +20,11 @@ hr {
     margin-bottom: 5vh;
 }
 
+/* 小li */
+li {
+    list-style: none;
+}
+
 /* 身体 */
 body {
     /* background-image: url(../assets/bgc.jpg); */
@@ -221,4 +226,54 @@ footer .footer {
     width: auto;
     height: auto;
     flex-direction: column;
+}
+
+/* 更多菜单 */
+.topBar .more ul {
+    position: absolute;
+    top: 78%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    width: auto;
+    height: auto;
+    color: #1f1f1f;
+    background-color: #bbe1fa;
+    border: solid 2px #f4f4f4;
+    border-radius: 2vh;
+    padding: 2vh;
+}
+
+.topBar .more ul a {
+    padding: 2vh;
+    border-radius: 1vh;
+    font-size: 2.5vh;
+    color: #1f1f1f;
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.topBar .more ul a::before {
+    content: "";
+    width: 4vh;
+    height: 4vh;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    background-size: cover;
+}
+
+.topBar .more ul a:hover {
+    background-color: #1f1f1f;
+    color: #f4f4f4;
+}
+
+.topBar .more .minecraft::before {
+    background-image: url(../assets/mcIcon.png);
+}
+
+.topBar .more .dropMsg::before {
+    background-image: url(../assets/dropMsg.png);
 }

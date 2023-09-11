@@ -59,6 +59,21 @@ document.addEventListener('DOMContentLoaded', function () {
             tar.scrollIntoView({ behavior: "smooth" });
         });
     })();
+    // 点击more
+    (function () {
+        const btn = document.querySelector(".topBar .more");
+        const ul = document.querySelector(".topBar .more ul");
+        btn.addEventListener("mouseenter", function () {
+            ul.style.opacity = 1;
+            ul.style.transition = "all 0.3s ease-in-out";
+            ul.style.visibility = "visible"
+        })
+        btn.addEventListener("mouseleave", function () {
+            ul.style.opacity = 0;
+            ul.style.transition = "all 0.3s ease-in-out";
+            ul.style.visibility = "hidden"
+        })
+    })();
 });
 
 
