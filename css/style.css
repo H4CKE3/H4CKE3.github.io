@@ -33,6 +33,7 @@ body {
 
 /* 头部 */
 .topBar {
+    z-index: 100;
     display: flex;
     align-items: center;
     background-color: #1f1f1f;
@@ -176,6 +177,7 @@ body {
 
 /* 滚动到首页 */
 .upToTop {
+    z-index: 100;
     position: fixed;
     bottom: 10vh;
     right: -5vh;

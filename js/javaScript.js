@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener("scroll", function () {
             const dis = document.documentElement.scrollTop;
             if (dis >= topBar.offsetHeight) {
-                topBar.style.backgroundColor = "transparent";
-            } else {
                 topBar.style.backgroundColor = "#1f1f1f";
+            } else {
+                topBar.style.backgroundColor = "transparent";
             }
         });
     })();
