@@ -74,6 +74,12 @@ document.addEventListener('DOMContentLoaded', function () {
             ul.style.visibility = "hidden"
         })
     })();
+    //错误重定向
+    (function(){
+        window.onerror = function() {
+            window.location.href = "index.html";
+        };
+    })();
 });
 
 
