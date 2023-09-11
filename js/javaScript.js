@@ -17,14 +17,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // 跳转头部
     (function () {
         const up = document.querySelector(".upToTop");
+        const topBar = document.querySelector(".topBar");
         window.addEventListener("scroll", function () {
             const dis = document.documentElement.scrollTop;
-            if (dis >= 75) {
+            if (dis >= topBar.offsetHeight) {
                 up.style.opacity = 1;
-                up.style.right = "15px";
+                up.style.right = "5vh";
             } else {
                 up.style.opacity = 0;
-                up.style.right = "-15px";
+                up.style.right = "-5vh";
             }
         });
         up.addEventListener("click", function () {
@@ -43,14 +44,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const topBar = document.querySelector(".topBar");
         window.addEventListener("scroll", function () {
             const dis = document.documentElement.scrollTop;
-            if (dis >= 75) {
+            if (dis >= topBar.offsetHeight) {
                 topBar.style.backgroundColor = "transparent";
             } else {
                 topBar.style.backgroundColor = "#1f1f1f";
             }
         });
     })();
-    //跳转
+    //跳转到个人信息
     (function () {
         const btn = document.querySelector(".topBar .info");
         const tar = document.getElementById("chunk1");

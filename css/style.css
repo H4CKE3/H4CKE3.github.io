@@ -16,8 +16,8 @@ hr {
     width: 80%;
     border: none;
     border-top: 1px solid #1f1f1f;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 /* 身体 */
@@ -37,7 +37,7 @@ body {
     align-items: center;
     background-color: #1f1f1f;
     width: 100%;
-    height: 75px;
+    height: 10vh;
     padding-left: 10%;
     padding-right: 10%;
     position: fixed;
@@ -70,38 +70,22 @@ body {
     transition: 0.3s ease-in-out;
     justify-content: center;
     align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100px;
-    height: 45px;
-    font-size: 18px;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    width: 15vh;
+    height: 6vh;
+    font-size: 3vh;
     color: #f4f4f4;
     border: 2px solid transparent;
-    border-radius: 10px;
-}
-
-/* 头部移动端适配 */
-@media (max-width: 768px) {
-    .topBar {
-        flex-direction: column;
-        align-items: flex-end;
-        height: auto;
-    }
-
-    .topBar .home,
-    .topBar .more,
-    .topBar .info {
-        width: auto;
-        height: auto;
-    }
+    border-radius: 1vh;
 }
 
 .topBar .home::before,
 .topBar .more::before,
 .topBar .info::before {
     content: "";
-    width: 30px;
-    height: 30px;
+    width: 4vh;
+    height: 4vh;
     justify-content: center;
     align-items: center;
     display: inline-block;
@@ -124,10 +108,18 @@ body {
 .topBar .more:hover,
 .topBar .info:hover {
     border: 2px #f4f4f4 solid;
-    border-radius: 16px;
+    border-radius: 2vh;
     background-color: #bbe1fa;
     color: #1f1f1f;
     transition: 0.3s ease-in-out;
+}
+
+/* 头部移动端适配 */
+@media (max-width: 768px) {
+    .topBar {
+        flex-direction: column;
+        height: auto;
+    }
 }
 
 /* 主界面 */
@@ -141,7 +133,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     width: auto;
-    height: 750px;
+    height: 100vh;
     background-size: cover;
 }
 
@@ -150,13 +142,13 @@ body {
 .main .wechat {
     cursor: pointer;
     content: "";
-    width: 40px;
-    height: 40px;
+    width: 6vh;
+    height: 6vh;
     justify-content: center;
     align-items: center;
     display: inline-block;
     background-size: cover;
-    margin: 0 10px;
+    margin: 0 1vh;
     opacity: 0.7;
     transition: 0.3s ease-in-out;
 }
@@ -176,8 +168,8 @@ body {
 .main .github:hover,
 .main .qq:hover,
 .main .wechat:hover {
-    width: 60px;
-    height: 60px;
+    width: 8vh;
+    height: 8vh;
     opacity: 1;
     transition: 0.3s ease-in-out;
 }
@@ -185,8 +177,8 @@ body {
 /* 滚动到首页 */
 .upToTop {
     position: fixed;
-    bottom: 100px;
-    right: -15px;
+    bottom: 10vh;
+    right: -5vh;
     cursor: pointer;
     content: "";
     display: block;
@@ -208,19 +200,19 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: start;
-    width: 100;
+    width: auto;
     height: 100vh;
     margin: 2% 6%;
     padding: 5%;
     background-color: rgba(244, 244, 244, 0.6);
     font-size: 3vh;
-    border-radius: 25px;
+    border-radius: 3vh;
 }
 
 /* 尾部 */
 footer .footer {
     background-color: #f4f4f4;
-    font-size: 14px;
+    font-size: 2vh;
     display: flex;
     justify-content: center;
     align-items: center;
