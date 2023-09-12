@@ -78,6 +78,13 @@ document.addEventListener('DOMContentLoaded', function () {
             ul.style.visibility = "hidden"
         })
     })();
+    //版权日期改变
+    (function () {
+        const date = new Date();
+        const y = date.getFullYear();
+        const tar = document.querySelector(".copyRight");
+        tar.innerHTML = `Copyright © 2023 - ${y} Personal Website`
+    })();
 });
 
 
