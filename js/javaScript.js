@@ -57,6 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const tar = document.getElementById("chunk1");
         btn.addEventListener("click", function () {
             tar.scrollIntoView({ behavior: "smooth" });
+            const h = document.querySelector(".topBar");
+            setTimeout(function () {
+                window.scrollBy(0, -h.offsetHeight);
+            }, 1000);
         });
     })();
     // 点击more

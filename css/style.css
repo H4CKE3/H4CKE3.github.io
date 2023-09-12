@@ -245,7 +245,7 @@ footer .footer {
 }
 
 .topBar .more ul a {
-    padding: 2vh;
+    padding: 2vh 1vh;
     border-radius: 1vh;
     font-size: 2.5vh;
     color: #1f1f1f;
@@ -253,6 +253,7 @@ footer .footer {
     text-decoration: none;
     justify-content: flex-start;
     align-items: center;
+    transition: 0.3s ease-in-out;
 }
 
 .topBar .more ul a::before {
@@ -266,8 +267,9 @@ footer .footer {
 }
 
 .topBar .more ul a:hover {
-    background-color: #1f1f1f;
+    background-color: #76B6EA;
     color: #f4f4f4;
+    transition: 0.3s ease-in-out;
 }
 
 .topBar .more .minecraft::before {
