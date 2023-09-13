@@ -279,3 +279,7 @@ footer .footer {
 .topBar .more .dropMsg::before {
     background-image: url(../assets/dropMsg.png);
 }
+
+.topBar .more .ccard::before {
+    background-image: url(../assets/ccard.png);
+}
