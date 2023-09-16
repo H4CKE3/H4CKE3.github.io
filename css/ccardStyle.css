@@ -1,0 +1,151 @@
+/* 初始化标签 */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* 第一页 */
+.page {
+    background-color: skyblue;
+    /* background-image: url(../assets/ccard/bg.png); */
+    background-image: url(https://www.helloimg.com/images/2023/09/16/oniFUC.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 100vh;
+}
+
+/* 点击办理 */
+.page .get {
+    position: absolute;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: slateblue;
+    color: #f4f4f4;
+    border: 2px solid #bbe1fa;
+    font-size: 5vh;
+    border-radius: 10%;
+    box-shadow: 2px 2px 10px gray;
+    transition: 0.3s ease-in-out;
+    top: 50%;
+    right: 20%;
+    width: 30vh;
+    height: 15vh;
+}
+
+.page .get:hover {
+    transition: 0.3s ease-in-out;
+    color: #1f1f1f;
+    background-color: #bbe1fa;
+}
+
+.page .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vh;
+    padding-top: 3vh;
+}
+
+.page #firstImg {
+    display: flex;
+    width: 30%;
+}
+
+.page .titleWords {
+    justify-content: start;
+    align-items: center;
+    padding-left: 10%;
+    padding-top: 10%;
+}
+
+.page .titleWords #w1 {
+    font-size: 5vh;
+    padding-bottom: 2%;
+}
+
+.page .titleWords #w2 {
+    font-size: 4vh;
+}
+
+/* 第二页 */
+.page .page2 {
+    padding-top: 5vh;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.page .page2 .logo {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.page .page2 .logo img {
+    flex: 2.5;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 25%;
+}
+
+.page .page2 .dropMsg {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 3vh;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* 第三页 */
+.page .page3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page .page3 div {
+    padding-top: 5vh;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+.page .page3 .dropMsg {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 3vh;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.page .page3 img {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 30%;
+}

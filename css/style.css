@@ -27,7 +27,7 @@ li {
 
 /* 身体 */
 body {
-    /* background-image: url(../assets/bgc.jpg); */
+    /* background-image: url(../assets/bg.jpg); */
     background-image: url(https://www.helloimg.com/images/2023/09/11/onGdJo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -134,7 +134,7 @@ body {
     justify-content: center;
     align-items: end;
     background-color: #f4f4f4;
-    /* background-image: url(../assets/bgc1.png); */
+    /* background-image: url(../assets/bg1.png); */
     background-image: url(https://www.helloimg.com/images/2023/09/11/onGvOD.png);
     background-repeat: no-repeat;
     background-position: center;
