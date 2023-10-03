@@ -283,3 +283,7 @@ footer .footer {
 .topBar .more .ccard::before {
     background-image: url(../assets/ccard.png);
 }
+
+.topBar .more .openAi::before {
+    background-image: url(../assets/openAi.png);
+}
