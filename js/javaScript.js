@@ -71,11 +71,13 @@ document.addEventListener('DOMContentLoaded', function () {
             ul.style.opacity = 1;
             ul.style.transition = "all 0.3s ease-in-out";
             ul.style.visibility = "visible"
+            ul.style.transform = "scaleY(1)"
         })
         btn.addEventListener("mouseleave", function () {
             ul.style.opacity = 0;
             ul.style.transition = "all 0.3s ease-in-out";
             ul.style.visibility = "hidden"
+            ul.style.transform = "scaleY(0)"
         })
     })();
     //版权日期改变

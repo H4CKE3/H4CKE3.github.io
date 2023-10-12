@@ -242,6 +242,8 @@ footer .footer {
     border: solid 2px #f4f4f4;
     border-radius: 2vh;
     padding: 2vh;
+    transform :scaleY(0);
+    transform-origin: top;
 }
 
 .topBar .more ul a {
