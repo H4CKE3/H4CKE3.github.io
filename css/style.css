@@ -229,9 +229,12 @@ footer .footer {
 }
 
 /* 更多菜单 */
+.topBar .more{
+    position: relative;
+}
 .topBar .more ul {
     position: absolute;
-    top: 78%;
+    top: 100%;
     visibility: hidden;
     opacity: 0;
     transition: all 1s ease-in-out;
