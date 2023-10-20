@@ -121,10 +121,149 @@ body {
 }
 
 /* 头部移动端适配 */
+.mobile {
+    display: none;
+    z-index: 100;
+    width: 100%;
+    height: 12vh;
+    background-color: #1f1f1f;
+    position: fixed;
+    transition: 0.3s ease-in-out;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile .title {
+    color: dodgerblue;
+    font-size: 4.5vh;
+}
+
+.mobile .more {
+    position: absolute;
+    right: 5%;
+    background-image: url(../assets/more2.png);
+    width: 5vh;
+    height: 5vh;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.mobileMenu {
+    z-index: 101;
+    position: fixed;
+    width: 60%;
+    height: 100%;
+    background-color: #f4f4f4;
+    right: 0;
+    opacity: 0.96;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: 0.3s ease-in-out;
+}
+
+.mobileMenu .cancel {
+    content: '';
+    position: absolute;
+    right: 0;
+    margin: 1.8vh;
+    width: 6.4vh;
+    height: 6.4vh;
+    background-image: url("../assets/cancel.png");
+    background-size: cover;
+    cursor: pointer;
+}
+
+.mobileMenu .title {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vh;
+    color: dodgerblue;
+}
+
+.mobileMenu hr {
+    width: 100%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.mobileMenu .home,
+.mobileMenu .info,
+.mobileMenu .more ul {
+    padding: 2vh;
+    padding-left: 5vh;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 2.5vh;
+    color: #1f1f1f;
+}
+
+.mobileMenu .home div,
+.mobileMenu .info div {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.mobileMenu .home::before,
+.mobileMenu .info::before,
+.mobileMenu .more ul a::before {
+    content: "";
+    width: 4vh;
+    height: 4vh;
+    vertical-align: middle;
+    display: inline-block;
+    background-size: cover;
+}
+
+.mobileMenu .more ul a {
+    align-items: center;
+    display: block;
+    width: auto;
+    line-height: 10vh;
+    height: 10vh;
+    font-size: 2.5vh;
+    color: #1f1f1f;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.mobileMenu .home::before {
+    background-image: url(../assets/home.png);
+}
+
+.mobileMenu .info::before {
+    background-image: url(../assets/info.png);
+}
+
+.mobileMenu .more .minecraft::before {
+    background-image: url(../assets/mcIcon.png);
+}
+
+.mobileMenu .more .dropMsg::before {
+    background-image: url(../assets/dropMsg.png);
+}
+
+.mobileMenu .more .ccard::before {
+    background-image: url(../assets/ccard.png);
+}
+
+.mobileMenu .more .openAi::before {
+    background-image: url(../assets/openAi.png);
+}
+
 @media (max-width: 768px) {
     .topBar {
-        flex-direction: column;
-        height: auto;
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
     }
 }
 
@@ -229,9 +368,10 @@ footer .footer {
 }
 
 /* 更多菜单 */
-.topBar .more{
+.topBar .more {
     position: relative;
 }
+
 .topBar .more ul {
     position: absolute;
     top: 100%;
@@ -245,7 +385,7 @@ footer .footer {
     border: solid 2px #f4f4f4;
     border-radius: 2vh;
     padding: 2vh;
-    transform :scaleY(0);
+    transform: scaleY(0);
     transform-origin: top;
 }
 

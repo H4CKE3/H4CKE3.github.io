@@ -18,14 +18,25 @@ document.addEventListener('DOMContentLoaded', function () {
     (function () {
         const up = document.querySelector(".upToTop");
         const topBar = document.querySelector(".topBar");
+        const mobile = document.querySelector(".mobile");
         window.addEventListener("scroll", function () {
             const dis = document.documentElement.scrollTop;
-            if (dis >= topBar.offsetHeight) {
-                up.style.opacity = 1;
-                up.style.right = "5vh";
+            if (topBar.offsetHeight != 0) {
+                if (dis >= topBar.offsetHeight) {
+                    up.style.opacity = 1;
+                    up.style.right = "5vh";
+                } else {
+                    up.style.opacity = 0;
+                    up.style.right = "-5vh";
+                }
             } else {
-                up.style.opacity = 0;
-                up.style.right = "-5vh";
+                if (dis >= mobile.offsetHeight) {
+                    up.style.opacity = 1;
+                    up.style.right = "5vh";
+                } else {
+                    up.style.opacity = 0;
+                    up.style.right = "-5vh";
+                }
             }
         });
         up.addEventListener("click", function () {
@@ -38,16 +49,27 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.addEventListener("click", function () {
             window.location.href = "../index.html";
         });
+        const mobileBtn = document.querySelector(".mobileMenu .home");
+        mobileBtn.addEventListener("click", function () {
+            window.location.href = "../index.html";
+        });
     })();
     //往下滑动透明导航栏
     (function () {
         const topBar = document.querySelector(".topBar");
+        const mobile = document.querySelector(".mobile");
         window.addEventListener("scroll", function () {
             const dis = document.documentElement.scrollTop;
             if (dis >= topBar.offsetHeight) {
                 topBar.style.backgroundColor = "#1f1f1f";
             } else {
                 topBar.style.backgroundColor = "transparent";
+            }
+            const dis2 = document.documentElement.scrollTop;
+            if (dis >= mobile.offsetHeight) {
+                mobile.style.backgroundColor = "#1f1f1f";
+            } else {
+                mobile.style.backgroundColor = "transparent";
             }
         });
     })();
@@ -60,6 +82,16 @@ document.addEventListener('DOMContentLoaded', function () {
             const h = document.querySelector(".topBar");
             setTimeout(function () {
                 window.scrollBy(0, -h.offsetHeight);
+            }, 1000);
+        });
+
+        const btn2 = document.querySelector(".mobileMenu .info");
+        const tar2 = document.getElementById("chunk1");
+        btn2.addEventListener("click", function () {
+            tar2.scrollIntoView({ behavior: "smooth" });
+            const h2 = document.querySelector(".mobile");
+            setTimeout(function () {
+                window.scrollBy(0, -h2.offsetHeight);
             }, 1000);
         });
     })();
@@ -86,6 +118,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const y = date.getFullYear();
         const tar = document.querySelector(".copyRight");
         tar.innerHTML = `Copyright © 2023 - ${y} Personal Website`
+    })();
+    //移动端点击更多菜单
+    (function () {
+        const menu = document.querySelector(".mobile .more");
+        const layout = document.querySelector(".mobileMenu");
+        menu.addEventListener("click", () => {
+            layout.style.transform = "scaleX(1)"
+        })
+        const cancel = document.querySelector(".mobileMenu .cancel");
+        cancel.addEventListener("click", () => {
+            layout.style.transform = "scaleX(0)"
+        })
+
     })();
 });
 
