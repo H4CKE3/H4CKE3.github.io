@@ -56,16 +56,12 @@ body {
     flex: 5;
     height: auto;
     width: auto;
-    justify-content: center;
+    display: flex;
+    justify-content: start;
     align-items: center;
     color: dodgerblue;
     font-size: 6vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.topBar .title:hover {
-    font-size: 7vh;
-    transition: 0.3s ease-in-out;
 }
 
 .topBar .home,
@@ -328,8 +324,7 @@ body {
 }
 
 .upToTop:hover {
-    width: 10vh;
-    height: 10vh;
+    transform: scale(1.5);
 }
 
 /* 小区块 */
