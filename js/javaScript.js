@@ -123,14 +123,23 @@ document.addEventListener('DOMContentLoaded', function () {
     (function () {
         const menu = document.querySelector(".mobile .more");
         const layout = document.querySelector(".mobileMenu");
+        let open = 0;
         menu.addEventListener("click", () => {
             layout.style.transform = "scaleX(1)"
+            open = 1;
+            event.stopPropagation();//冒泡事件知识点
         })
         const cancel = document.querySelector(".mobileMenu .cancel");
         cancel.addEventListener("click", () => {
             layout.style.transform = "scaleX(0)"
+            open = 0;
         })
-
+        document.addEventListener("click", ((e) => {
+            if (open == 1 && e.target !== layout) {
+                layout.style.transform = "scaleX(0)"
+                open = 0;
+            }
+        }))
     })();
 });
 
