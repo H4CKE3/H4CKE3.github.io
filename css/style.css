@@ -286,6 +286,7 @@ body {
     width: auto;
     height: 100vh;
     background-size: cover;
+    position: relative;
 }
 
 .main .github,
@@ -436,4 +437,15 @@ footer .footer {
 
 .topBar .more .openAi::before {
     background-image: url(../assets/openAi.png);
+}
+
+/* 每日一言 */
+.main .dailyWords {
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    width: 90%;
+    height: auto;
+    color: #FF7F50;
+    font-size: 2.5vh;
 }

@@ -141,6 +141,56 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }))
     })();
+    //每日一言
+    //text:传入字符串
+    //durIn:出现时间
+    //durOut:消失时间
+    //tar:目标slector
+    //rep:是否重复调用 1 0
+    function textShow(text, durIn, durOut, tar, rep) {
+        let len = text.length;//获取字符长度
+        function show(idx) {
+            if (idx > len) {
+                setTimeout(function () {
+                    hide(idx - 1);
+                }, 3000);
+            } else {
+                tar.innerHTML = text.substr(0, idx);
+                setTimeout(function () {
+                    show(idx + 1);
+                }, durIn)
+            }
+        }
+        function hide(idx) {
+            if (idx < 0) {
+                if (rep) {
+                    setTimeout(function () {
+                        show(1);
+                    }, 1000);
+                } else {
+                    return;
+                }
+            } else {
+                tar.innerHTML = text.substr(0, idx);
+                setTimeout(function () {
+                    hide(idx - 1);
+                }, durOut)
+            }
+        }
+        show(1)
+    }
+    function getDailyWords() {
+        axios({
+            method: 'post',
+            url: 'https://tenapi.cn/v2/yiyan'
+        }).then(res => {
+            let tar = document.querySelector(".main .dailyWords");
+            textShow(res.data, 180, 70, tar, 1)
+        }).catch(err => {
+            alert('每日一言接口错误，请联系管理员解决');
+        })
+    }
+    getDailyWords();
 });
 
 
