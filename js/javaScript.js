@@ -62,12 +62,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const dis = document.documentElement.scrollTop;
             if (dis >= topBar.offsetHeight) {
                 topBar.style.backgroundColor = "#1f1f1f";
+                topBar.style.opacity = '0.8';
             } else {
                 topBar.style.backgroundColor = "transparent";
             }
             const dis2 = document.documentElement.scrollTop;
             if (dis >= mobile.offsetHeight) {
                 mobile.style.backgroundColor = "#1f1f1f";
+                mobile.style.opacity = '0.8';
             } else {
                 mobile.style.backgroundColor = "transparent";
             }
@@ -191,6 +193,55 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
     getDailyWords();
+
+    //雪花飘落
+    function dropSnow() {
+        const tar = document.querySelector("canvas");
+        let w = window.innerWidth;
+        let h = window.innerHeight;
+        tar.width = w;
+        tar.height = h;
+        tar.style.pointerEvents = 'none';
+        tar.style.position = "fixed";
+        tar.style.zIndex = "99";
+        let context = tar.getContext("2d");
+        let num = 100;
+        let snows = [];
+        for (let i = 0; i < num; i++) {
+            snows.push({
+                x: Math.random() * w,
+                y: Math.random() * h,
+                r: Math.random() * 2 + 1
+            })
+        }
+        let draw = () => {
+            context.clearRect(0, 0, w, h);
+            context.beginPath();
+            context.fillStyle = 'rgb(255,255,255)';
+            context.shadowColor = 'rgb(255,255,255)';
+            context.shadowBlur = 'rgb(255,255,255)';
+            for (let i = 0; i < num; i++) {
+                let snow = snows[i];
+                context.moveTo(snow.x, snow.y);
+                context.arc(snow.x, snow.y, snow.r, 0, 2 * Math.PI);
+            }
+            context.fill();
+            context.closePath();
+            for (let i = 0; i < num; i++) {
+                snows[i].x += Math.random() * 3 + 1;
+                snows[i].y += Math.random() * 1 + 1;
+                if (snows[i].x > w) {
+                    snows[i].x = 0;
+                }
+                if (snows[i].y > h) {
+                    snows[i].y = 0;
+                }
+            }
+        }
+        draw();
+        setInterval(draw, 30);
+    }
+    dropSnow();
 });
 
 
