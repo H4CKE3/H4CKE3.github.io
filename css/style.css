@@ -280,7 +280,8 @@ body {
     background-color: #f4f4f4;
     /* background-image: url(../assets/bg1.png); */
     /* background-image: url(https://www.helloimg.com/images/2023/09/11/onGvOD.png); */
-    background-image: url(https://bing.icodeq.com);
+    /* background-image: url(https://bing.icodeq.com); */
+    background-image: url(https://www.todaybing.com/api/today/fr);
     background-repeat: no-repeat;
     background-position: center;
     width: auto;
